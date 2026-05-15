@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitariqa Atelier — Coming Soon</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wine: #6B3654;
+            --mauve: #8B4A6B;
+            --rose: #B97A93;
+            --blush: #E8C9D4;
+            --cream: #F8EFEC;
+            --ivory: #FBF6F3;
+            --ink: #3D1F30;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, var(--ivory) 0%, var(--cream) 50%, var(--blush) 100%);
+            color: var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(185, 122, 147, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(107, 54, 84, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 640px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 180px;
+            height: auto;
+            margin: 0 auto 2.5rem;
+            display: block;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        .ornament {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--rose);
+        }
+
+        .ornament .line {
+            width: 60px;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--rose), transparent);
+        }
+
+        .ornament .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--rose);
+            border-radius: 50%;
+            transform: rotate(45deg);
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--wine);
+            letter-spacing: 0.02em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--mauve);
+        }
+
+        .tagline {
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--mauve);
+            margin-bottom: 2rem;
+        }
+
+        p.description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            font-weight: 300;
+            line-height: 1.6;
+            color: var(--ink);
+            opacity: 0.85;
+            max-width: 480px;
+            margin: 0 auto 3rem;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--mauve);
+            opacity: 0.7;
+        }
+
+        .footer span {
+            color: var(--rose);
+            margin: 0 0.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .logo { width: 140px; margin-bottom: 2rem; }
+            .ornament .line { width: 40px; }
+            p.description { margin-bottom: 2rem; }
+            .footer { position: relative; bottom: auto; margin-top: 2rem; }
+            html, body { overflow: auto; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="logo.png" alt="Sitariqa Atelier" class="logo">
+
+        <div class="ornament">
+            <span class="line"></span>
+            <span class="dot"></span>
+            <span class="line"></span>
+        </div>
+
+        <h1>Something <em>beautiful</em><br>is being stitched</h1>
+
+        <div class="tagline">Coming Soon</div>
+
+        <p class="description">
+            Crafted with care, thread by thread. Our atelier is preparing to open its doors — a place where artistry meets elegance.
+        </p>
+    </div>
+
+    <div class="footer">
+        Sitariqa Atelier <span>&middot;</span> Est. 2026
+    </div>
+</body>
+</html>
